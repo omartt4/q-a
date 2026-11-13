@@ -52,7 +52,7 @@ The Dockerfile uses a build stage to install dependencies into a virtual environ
 
 ## GitHub Actions and Docker Hub
 
-Create Docker Hub repository `qa-backend`, then add `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` repository secrets. Pushes to `main` run tests before the workflow logs in, builds with Buildx, and publishes `latest`, a commit-SHA tag, and release tags.
+Create Docker Hub repository `qa-backend`, then add either `DOCKERHUB_TOKEN` or `DOCKER_TOKEN` as a repository secret. Pushes to `main` run tests before the workflow logs in, builds with Buildx, and publishes `latest`, a commit-SHA tag, and release tags.
 
 ```powershell
 docker pull YOUR_USERNAME/qa-backend:latest
