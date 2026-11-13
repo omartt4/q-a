@@ -8,6 +8,7 @@ on:
 permissions:
   contents: read
 
+# Publishing runs after the test gate on every main push.
 jobs:
   test:
     runs-on: ubuntu-latest
